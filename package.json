@@ -1,0 +1,25 @@
+{
+  "name": "gleam2torch-openclawbook",
+  "version": "1.0.0",
+  "description": "面向一人公司的 OpenClaw 实战指南",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gleam2Torch/Gleam2Torch-OpenClawBook.git"
+  },
+  "keywords": ["openclaw", "ai-agent", "一人公司"],
+  "author": "Gleam2Torch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gleam2Torch/Gleam2Torch-OpenClawBook/issues"
+  },
+  "homepage": "https://gleam2torch.github.io/Gleam2Torch-OpenClawBook/",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
