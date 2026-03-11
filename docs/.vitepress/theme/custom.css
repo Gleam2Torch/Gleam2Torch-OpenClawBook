@@ -1,0 +1,186 @@
+/* ==================== 顶部导航栏对齐 ==================== */
+
+/* 确保导航栏容器内所有元素垂直居中对齐 */
+.VPNavBar .container {
+  align-items: center !important;
+}
+
+/* 修复标题区域高度，与右侧内容保持一致 */
+.VPNavBar .container > .title {
+  height: var(--vp-nav-height) !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* 确保标题文字与导航链接垂直对齐 */
+.VPNavBar .VPNavBarTitle .title {
+  height: var(--vp-nav-height) !important;
+  line-height: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* 搜索框与导航菜单垂直居中对齐 */
+.VPNavBar .content-body {
+  align-items: center !important;
+}
+
+/* 导航菜单容器垂直居中 */
+.VPNavBar .VPNavBarMenu {
+  align-items: center !important;
+}
+
+/* 导航菜单链接使用 flex 居中对齐，避免 line-height 导致的错位 */
+.VPNavBar .VPNavBarMenuLink {
+  line-height: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* ==================== Hero 区域布局 ==================== */
+
+/* 桌面端：左右布局 */
+.VPHero {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4rem !important;
+  padding: 5rem 2rem 2rem !important;
+  min-height: auto !important;
+}
+
+/* 隐藏背景装饰 */
+.VPHero .image-bg {
+  display: none !important;
+}
+
+/* 图片区域 */
+.VPHero .image {
+  order: 1;
+  margin: 0 !important;
+  flex-shrink: 0;
+}
+
+/* 图片容器 */
+.VPHero .image-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* 隐藏默认的单个图片元素 */
+.VPHero .image-src {
+  display: none !important;
+}
+
+/* LOGO - 使用伪元素 */
+.VPHero .image-container::before {
+  content: '';
+  display: block;
+  width: 380px;
+  height: 380px;
+  background-image: url('/images/Gleam2Torch-LOGO-transparent-small.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* 左侧文字区域 */
+.VPHero .main {
+  order: 0;
+  text-align: left !important;
+  max-width: 480px;
+}
+
+.VPHero .name {
+  justify-content: flex-start !important;
+  line-height: 1.2 !important;
+}
+
+.VPHero .tagline {
+  text-align: left !important;
+  margin-top: 1rem !important;
+}
+
+.VPHero .actions {
+  margin-top: 1.5rem !important;
+}
+
+/* ==================== 平板适配 ==================== */
+@media (max-width: 1024px) {
+  .VPHero {
+    gap: 2.5rem !important;
+  }
+
+  .VPHero .image-container::before {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* ==================== 移动端适配 ==================== */
+@media (max-width: 768px) {
+  .VPHero {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    padding: 5.5rem 1rem 1.5rem !important;
+  }
+
+  /* 文字区域居中 */
+  .VPHero .main {
+    text-align: center !important;
+    max-width: 100%;
+    order: 0;
+  }
+
+  .VPHero .name {
+    justify-content: center !important;
+  }
+
+  .VPHero .tagline {
+    text-align: center !important;
+    margin-top: 0.75rem !important;
+  }
+
+  .VPHero .actions {
+    margin-top: 1rem !important;
+  }
+
+  /* 图片区域 - 扩大容器，让 LOGO 有足够显示空间 */
+  .VPHero .image {
+    order: 1;
+    margin: 0 !important;
+    width: 100%;
+  }
+
+  .VPHero .image-container {
+    width: 380px !important;
+    height: 380px !important;
+  }
+
+  .VPHero .image-container::before {
+    width: 380px !important;
+    height: 380px !important;
+  }
+}
+
+/* ==================== 小屏幕手机适配 ==================== */
+@media (max-width: 480px) {
+  .VPHero {
+    gap: 1rem !important;
+    padding: 4.5rem 0.5rem 1.5rem !important;
+  }
+
+  /* 小屏手机：LOGO 380px */
+  .VPHero .image-container {
+    width: 380px !important;
+    height: 380px !important;
+  }
+
+  .VPHero .image-container::before {
+    width: 380px !important;
+    height: 380px !important;
+  }
+}
